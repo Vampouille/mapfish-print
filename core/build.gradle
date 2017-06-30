@@ -228,8 +228,9 @@ gretty {
 }
 
 
-task show << {
-    war.classpath.files.each {println it}
+task show {
+     doLast {
+         war.classpath.files.each { println it }
 //    project(":core").war.properties.each {println it}
 //      components.java.usages.iterator().next().artifacts.each {println it}
 //    publishing.getPublications().each { pub ->
@@ -238,6 +239,7 @@ task show << {
 //    sourceSets.main.classes.asFileTree.each {println it}
 //    configurations.archives.allArtifacts.each{println (it.name + " -- " + it.file)}
 //    tasks.each {println(it)}
+     }
 }
 
 task libJavadocJar(type: Jar, dependsOn: javadoc) {
