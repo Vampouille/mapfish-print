@@ -329,9 +329,7 @@ public final class NorthArrowGraphic {
         private final InputStream inputStream;
         private final URI uri;
 
-        public RasterReference(
-                final InputStream inputStream,
-                final URI uri) {
+        RasterReference(final InputStream inputStream, final URI uri) {
             this.inputStream = inputStream;
             this.uri = uri;
         }

@@ -159,7 +159,7 @@ public final class LegendProcessor extends AbstractProcessor<LegendProcessor.Inp
         private int level;
         private File tempTaskDirectory;
 
-        public IconTask(final URL icon, final ExecutionContext context,
+        IconTask(final URL icon, final ExecutionContext context,
                 final int level, final File tempTaskDirectory,
                 final MfClientHttpRequestFactory clientHttpRequestFactory) {
             this.icon = icon;
@@ -221,7 +221,7 @@ public final class LegendProcessor extends AbstractProcessor<LegendProcessor.Inp
         private String name;
         private int level;
 
-        public NameTask(final String name, final int level) {
+        NameTask(final String name, final int level) {
             this.name = name;
             this.level = level;
         }

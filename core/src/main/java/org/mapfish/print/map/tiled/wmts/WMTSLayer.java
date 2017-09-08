@@ -66,7 +66,7 @@ public class WMTSLayer extends AbstractTiledLayer {
     final class WMTSTileCacheInfo extends TileCacheInformation {
         private Matrix matrix;
 
-        public WMTSTileCacheInfo(final MapBounds bounds, final Rectangle paintArea, final double dpi) {
+        WMTSTileCacheInfo(final MapBounds bounds, final Rectangle paintArea, final double dpi) {
             super(bounds, paintArea, dpi, WMTSLayer.this.param);
             double diff = Double.POSITIVE_INFINITY;
             final double targetResolution = bounds.getScale(paintArea, dpi).getResolution();

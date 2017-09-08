@@ -99,7 +99,7 @@ class MapfishPrintRepositoryService implements StreamRepositoryService {
         private final Closer closer;
         private final InputStream stream;
 
-        public ResponseClosingStream(final ClientHttpResponse response) throws IOException {
+        ResponseClosingStream(final ClientHttpResponse response) throws IOException {
             this.closer = Closer.create();
             this.closer.register(response);
             this.stream = this.closer.register(response.getBody());

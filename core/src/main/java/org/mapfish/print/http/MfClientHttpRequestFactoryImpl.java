@@ -167,7 +167,7 @@ public class MfClientHttpRequestFactoryImpl extends HttpComponentsClientHttpRequ
         private InputStream inputStream;
 
 
-        public Response(@Nonnull final HttpResponse response) {
+        Response(@Nonnull final HttpResponse response) {
             this.response = response;
             LOGGER.trace("Creating Http Response object: " + this.id);
         }

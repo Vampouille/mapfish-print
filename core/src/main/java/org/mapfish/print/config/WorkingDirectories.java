@@ -170,7 +170,7 @@ public class WorkingDirectories {
          * @param maxAgeReport The maximum age for a report in seconds.
          * @param maxAgeTaskDir The maximum age for a task directory in seconds.
          */
-        public CleanUpTask(final long maxAgeReport, final long maxAgeTaskDir) {
+        CleanUpTask(final long maxAgeReport, final long maxAgeTaskDir) {
             this.maxAgeReport = maxAgeReport;
             this.maxAgeTaskDir = maxAgeTaskDir;
         }

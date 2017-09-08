@@ -132,7 +132,7 @@ public final class AreaOfInterest {
     /**
      * Represents the ways that the area of interest (aoi) can be rendered on the map.
      */
-    public static enum AoiDisplay {
+    public enum AoiDisplay {
         /**
          * Draw the entire map and render the AOI polygon on the map. This is the default.
          */

@@ -229,8 +229,7 @@ public final class ColorParser {
         float blue = hueToRGB(p, q, finalHue - (1.0f / 3.0f));
         return new Color(red, green, blue, finalAlpha);
     }
-    private static float hueToRGB(final float p, final float q, final float hue)
-    {
+    private static float hueToRGB(final float p, final float q, final float hue) {
         float finalHue = hue;
         if (finalHue < 0) {
             finalHue += 1;

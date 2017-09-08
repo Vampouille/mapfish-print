@@ -319,7 +319,7 @@ public final class ProcessorDependencyGraphFactory {
         public final Class<?> type;
         public final Field field;
 
-        public InputValue(final String name, final Field field) {
+        InputValue(final String name, final Field field) {
             this.name = name;
             this.internalName = field.getName();
             this.type = field.getType();

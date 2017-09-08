@@ -129,7 +129,7 @@ final class OneOfTracker {
         private Collection<Field> choices = Lists.newArrayList();
         private Set<OneOfSatisfier> satisfiedBy = Sets.newHashSet();
 
-        public OneOfGroup(final String name) {
+        OneOfGroup(final String name) {
             this.name = name;
         }
     }
@@ -137,8 +137,7 @@ final class OneOfTracker {
         private final Field field;
         private final boolean isCanSatisfy;
 
-        public OneOfSatisfier(@Nonnull final Field field,
-                              final boolean isCanSatisfy) {
+        OneOfSatisfier(@Nonnull final Field field, final boolean isCanSatisfy) {
             this.field = field;
             this.isCanSatisfy = isCanSatisfy;
         }

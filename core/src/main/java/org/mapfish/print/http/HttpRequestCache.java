@@ -49,7 +49,7 @@ public final class HttpRequestCache {
         private final String statusText;
         private InputStream body;
 
-        public CachedClientHttpResponse(final ClientHttpResponse originalResponse) throws IOException {
+        CachedClientHttpResponse(final ClientHttpResponse originalResponse) throws IOException {
             this.headers = originalResponse.getHeaders();
             this.status = originalResponse.getRawStatusCode();
             this.statusText = originalResponse.getStatusText();
@@ -106,7 +106,7 @@ public final class HttpRequestCache {
         private final ClientHttpRequest originalRequest;
         private CachedClientHttpResponse response;
 
-        public CachedClientHttpRequest(final ClientHttpRequest request) throws IOException {
+        CachedClientHttpRequest(final ClientHttpRequest request) throws IOException {
             this.originalRequest = request;
         }
 

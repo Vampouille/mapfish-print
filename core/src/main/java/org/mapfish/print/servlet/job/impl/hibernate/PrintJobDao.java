@@ -106,7 +106,7 @@ public class PrintJobDao {
     public final int count(final PrintJobStatus.Status... statuses) {
         Criteria c = getSession().createCriteria(PrintJobStatusExtImpl.class);
         if (statuses.length > 0) {
-            c.add(Restrictions.in("status" , statuses));
+            c.add(Restrictions.in("status", statuses));
         }
         c.setProjection(Projections.rowCount());
         return ((Number) c.uniqueResult()).intValue();
@@ -121,7 +121,7 @@ public class PrintJobDao {
     public final List<PrintJobStatusExtImpl> get(final PrintJobStatus.Status... statuses) {
         Criteria c = getSession().createCriteria(PrintJobStatusExtImpl.class);
         if (statuses.length > 0) {
-            c.add(Restrictions.in("status" , statuses));
+            c.add(Restrictions.in("status", statuses));
         }
         return (List<PrintJobStatusExtImpl>) c.list();
     }

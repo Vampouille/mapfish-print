@@ -65,8 +65,7 @@ public final class TiledWmsLayer extends AbstractTiledLayer {
 
     private final class WmsTileCacheInformation extends TileCacheInformation {
 
-        public WmsTileCacheInformation(
-                final MapBounds bounds, final Rectangle paintArea, final double dpi) {
+        WmsTileCacheInformation(final MapBounds bounds, final Rectangle paintArea, final double dpi) {
             super(bounds, paintArea, dpi, TiledWmsLayer.this.param);
         }
 

@@ -59,8 +59,7 @@ public final class OsmLayer extends AbstractTiledLayer {
         private final double resolution;
         private final int resolutionIndex;
 
-        public OsmTileCacheInformation(
-                final MapBounds bounds, final Rectangle paintArea, final double dpi) {
+        OsmTileCacheInformation(final MapBounds bounds, final Rectangle paintArea, final double dpi) {
             super(bounds, paintArea, dpi, OsmLayer.this.param);
 
             final double targetResolution = bounds.getScale(paintArea, dpi).getResolution();

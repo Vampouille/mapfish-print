@@ -512,7 +512,7 @@ public class ThreadPoolJobManager implements JobManager {
 
         private final Callable<V> callable;
 
-        public JobFutureTask(final Callable<V> callable) {
+        JobFutureTask(final Callable<V> callable) {
             super(callable);
             this.callable = callable;
         }

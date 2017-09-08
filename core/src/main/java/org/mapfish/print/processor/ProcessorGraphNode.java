@@ -173,6 +173,10 @@ public final class ProcessorGraphNode<In, Out> {
 
     /**
      * A ForkJoinTask that will run the processor and all of its dependencies.
+     *  * <p></p>
+     *
+     * @param <In> Same as {@link org.mapfish.print.processor.Processor} <em>In</em> parameter
+     * @param <Out> Same as {@link org.mapfish.print.processor.Processor} <em>Out</em> parameter
      */
     public static final class ProcessorNodeForkJoinTask<In, Out> extends RecursiveTask<Values> {
         private final ProcessorExecutionContext execContext;
