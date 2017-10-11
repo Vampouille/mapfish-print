@@ -11,6 +11,7 @@ dependencies {
     jdeb 'org.vafer:jdeb:1.1.1', 'org.bouncycastle:bcpg-jdk15on:1.50'
 }
 
+defaultTasks 'debian'
 
 import org.apache.tools.ant.filters.ReplaceTokens
 task debianControlFiles(type: Copy) {
@@ -76,7 +77,3 @@ task debian {
 }
 
 debian.dependsOn debianControlFiles, debianDataFiles
-
-task build {
-    dependsOn debian
-}

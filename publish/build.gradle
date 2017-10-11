@@ -31,8 +31,10 @@ artifacts {
     }
 }
 
-task show << {
-    println configurations.archives.files
+task show {
+    doLast {
+        println configurations.archives.files
+    }
 }
 
 /*
@@ -156,7 +158,9 @@ if (Boolean.parseBoolean(enablePublishing)) {
         }
     }
 } else {
-    uploadArchives << {
-        throw new IllegalStateException("Cannot upload archives because enablePublishing property is not true.  It is $enablePublishing")
+    uploadArchives {
+        doLast {
+            throw new IllegalStateException("Cannot upload archives because enablePublishing property is not true.  It is $enablePublishing")
+        }
     }
 }

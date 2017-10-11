@@ -1,7 +1,7 @@
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'jetty'
+apply plugin: 'org.akhikhl.gretty'
 
 defaultTasks 'build'
 
@@ -16,10 +16,16 @@ dependencies {
 
 def site = new File(buildDir, "site").path
 
-jettyRun {
-    dependsOn ':docs:buildDocs'
-    webAppSourceDirectory = file(site)
+
+gretty {
+    servletContainer = "jetty7"
+    integrationTestTask = ':docs:buildDocs'
+//    webAppSourceDirectory = file(site)
 }
+//jettyRun {
+//    dependsOn ':docs:buildDocs'
+//    webAppSourceDirectory = file(site)
+//}
 
 task copyJavadocs(type: Copy) {
     dependsOn ':core:javadoc'

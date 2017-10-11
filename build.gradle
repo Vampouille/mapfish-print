@@ -62,6 +62,11 @@ configure(subprojects.findAll {['core', 'examples'].contains(it.name)}) {
 
     jar.dependsOn(checkstyleMain, findbugsMain)
 
+    eclipse {
+        classpath {
+           downloadSources=true
+        }
+    }
     checkstyle {
         configFile = file("$rootProject.rootDir/checkstyle_checks.xml")
         configProperties = ['basedir': project.rootDir.path]
